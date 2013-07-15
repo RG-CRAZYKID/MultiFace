@@ -1,0 +1,156 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".New_Profile" >
+
+    <!--
+         The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc.
+    -->
+<AbsoluteLayout
+        android:layout_width="500dp"
+        android:layout_height="500dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true" >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentLeft="true"
+                android:layout_marginBottom="100dp"
+                android:text="@string/profrepass"
+                android:textColor="#6799ee"
+                android:textSize="30sp" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="75dp"
+                android:text="@string/prof"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="#6799ee"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView4"
+                android:layout_alignRight="@+id/textView4"
+                android:layout_marginBottom="45dp"
+                android:text="@string/profpass"
+                android:textColor="#6799ee"
+                android:textSize="30sp" />
+
+            <Button
+                android:id="@+id/button1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignLeft="@+id/textView2"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="25dp"
+                android:background="#6799ee"
+                android:onClick="onOK"
+                android:text="@string/ok" />
+
+            <Button
+                android:id="@+id/button2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@+id/button1"
+                android:layout_alignRight="@+id/textView2"
+                android:background="#6799ee"
+                android:text="@string/cancel"
+                android:onClick="cancelButtonClick" />
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_above="@+id/textView3"
+                android:layout_alignRight="@+id/textView3"
+                android:layout_marginBottom="45dp"
+                android:text="@string/Profile_name"
+                android:textColor="#6799ee"
+                android:textSize="30sp" />
+
+            <EditText
+                android:id="@+id/editText2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView3"
+                android:layout_alignBottom="@+id/textView3"
+                android:layout_alignParentRight="true"
+                android:layout_toLeftOf="@id/textView3"
+                android:background="#6799ee"
+                android:ems="10"
+                android:inputType="numberPassword" />
+
+            <EditText
+                android:id="@+id/editText1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView1"
+                android:layout_alignBottom="@+id/textView1"
+                android:layout_alignParentRight="true"
+                android:layout_toLeftOf="@id/textView1"
+                android:background="#6799ee"
+                android:ems="10"
+                android:inputType="text" >
+                 <requestFocus />
+                 
+            </EditText>
+
+            <EditText
+                android:id="@+id/editText3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@+id/textView4"
+                android:layout_alignBottom="@+id/textView4"
+                android:layout_alignParentRight="true"
+                android:layout_toLeftOf="@id/textView4"
+                android:background="#6799ee"
+                android:ems="10"
+                android:inputType="numberPassword" />
+
+        </RelativeLayout>
+
+    </AbsoluteLayout>
+
+    <!--
+         This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows.
+    -->
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fitsSystemWindows="true" >
+
+        <LinearLayout
+            android:id="@+id/fullscreen_content_controls"
+            style="?buttonBarStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:background="@color/black_overlay"
+            android:orientation="horizontal"
+            tools:ignore="UselessParent" >
+        </LinearLayout>
+    </FrameLayout>
+
+</RelativeLayout>

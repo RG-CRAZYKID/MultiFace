@@ -1,0 +1,89 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LogIn" >
+ <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="71dp"
+        android:text="@string/login"
+        android:textColor="#6799ee"
+        android:textSize="42sp"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <AbsoluteLayout
+        android:layout_width="500dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" >
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="50dp"
+            android:layout_y="170dp"
+            android:text="@string/profile"
+            android:textColor="#6799ee"
+            android:textSize="30sp" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="50dp"
+            android:layout_y="220dp"
+            android:text="@string/profpass"
+            android:textColor="#6799ee"
+            android:textSize="30sp" />
+
+        <EditText
+            android:id="@+id/LogInPass"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="273dp"
+            android:layout_y="211dp"
+            android:ems="10"
+            android:inputType="numberPassword"/>
+
+           
+        <EditText
+            android:id="@+id/LogInProf"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="278dp"
+            android:layout_y="158dp"
+            android:ems="10"
+            android:inputType="text" >
+             <requestFocus />
+        </EditText>
+            
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="104dp"
+            android:layout_y="306dp"
+            android:background="#6799ee"
+            android:text="@string/ok"
+            android:textColor="#ffffff"
+            android:onClick="OKClicked" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_x="334dp"
+            android:layout_y="300dp"
+            android:background="#6799ee"
+            android:text="@string/cancel"
+            android:textColor="#ffffff"
+            android:onClick="cancelClicked" />
+    </AbsoluteLayout>
+    
+</RelativeLayout>

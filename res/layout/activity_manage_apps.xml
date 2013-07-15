@@ -1,0 +1,102 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ManageApps" >
+    
+      <ScrollView
+          android:id="@+id/ScrollListA"
+          android:layout_width="300dp"
+          android:layout_height="fill_parent"
+          android:layout_alignParentLeft="true"
+          android:layout_below="@+id/buttonLayout"
+          android:background="#ffffff"
+          android:fillViewport="true" >
+
+        <LinearLayout
+            android:id="@+id/ListALayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#000000"
+            android:orientation="vertical"
+            android:visibility="visible" >
+
+        </LinearLayout>
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/ScrollListB"
+        android:layout_width="300dp"
+        android:layout_height="fill_parent"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentStart="false"
+        android:layout_below="@id/buttonLayout"
+        android:layout_toRightOf="@id/ScrollListA"
+        android:background="#6799aa"
+        android:fillViewport="true" >
+
+        <LinearLayout
+            android:id="@+id/ListBLayout"
+            android:layout_width="match_parent"
+            android:layout_height="800dp"
+            android:layout_marginBottom="0dp"
+            android:layout_marginTop="0dp"
+            android:background="#6799ee"
+            android:focusable="true"
+            android:orientation="vertical"
+            android:scrollbars="horizontal"
+            android:visibility="visible" >
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000" >
+
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:onClick="addAll"
+            android:text="@string/addall"
+            android:textColor="#ffffff" />
+
+        <Button
+            android:id="@+id/button2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:onClick="remAll"
+            android:text="@string/remall"
+            android:textColor="#ffffff" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:onClick="okClicked"
+                android:text="@string/ok"
+                android:textColor="#ffffff" />
+
+            <Button
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:onClick="cancelClicked"
+                android:text="@string/cancel"
+                android:textColor="#ffffff" />
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

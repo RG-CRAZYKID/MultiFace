@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.multiface"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="8" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.example.multiface.Homescreen"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.multiface.About"
+            android:label="@string/title_activity_about"
+            android:parentActivityName="com.example.multiface.Homescreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.multiface.Homescreen" />
+        </activity>
+        <activity
+            android:name="com.example.multiface.Profile"
+            android:label="@string/title_activity_profile"
+            android:parentActivityName="com.example.multiface.Homescreen" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.multiface.Homescreen" />
+        </activity>
+        <activity
+            android:name="com.example.multiface.New_Profile"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_new__profile"
+            android:parentActivityName="com.example.multiface.ProfileList"
+            android:theme="@style/FullscreenTheme" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.multiface.ProfileList" />
+        </activity>
+        <activity
+            android:name="com.example.multiface.ProfileList"
+            android:label="@string/title_activity_profile_list"
+            android:parentActivityName="com.example.multiface.Profile" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.multiface.Profile" />
+        </activity>
+        <activity
+            android:name="com.example.multiface.ProfileSettings"
+            android:label="@string/title_activity_profile_settings" >
+        </activity>
+        <activity
+            android:name="com.example.multiface.ProfilePasswordRemove"
+            android:label="@string/title_activity_profile_password_remove" >
+        </activity>
+        <activity
+            android:name="com.example.multiface.ChangeProfilePassword"
+            android:label="@string/title_activity_change_profile_password" >
+        </activity>
+        <activity
+            android:name="com.example.multiface.ManageProfile"
+            android:label="@string/title_activity_manage_profile" >
+        </activity>
+        <activity
+            android:name="com.example.multiface.ManageApps"
+            android:label="@string/title_activity_manage_apps" >
+        </activity>
+        <activity
+            android:name="com.example.multiface.LogIn"
+            android:label="@string/title_activity_log_in" >
+        </activity>
+        <activity
+            android:name="com.example.multiface.StartScreen"
+            android:label="@string/title_activity_start_screen" >
+        </activity>
+        <activity
+            android:name="com.example.multiface.Start"
+            android:label="@string/title_activity_start" >
+        </activity>
+    </application>
+
+</manifest>
